@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app@latest . --typescript --app --no-tailwind --no-eslint --no-src-dir --import-alias \"@/*\" --use-npm)",
+      "Bash(npm install:*)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Bash(curl -s -X POST http://localhost:3000/api/devops-webhook -H \"Content-Type: application/json\" -d '{\"\"eventType\"\":\"\"workitem.created\"\",\"\"createdDate\"\":\"\"2026-03-30T10:00:00Z\"\",\"\"resource\"\":{\"\"id\"\":42,\"\"fields\"\":{\"\"System.Title\"\":\"\"Fix login page timeout\"\",\"\"System.WorkItemType\"\":\"\"Bug\"\",\"\"System.State\"\":\"\"New\"\",\"\"System.AssignedTo\"\":{\"\"displayName\"\":\"\"Samir Tak\"\"}}}}')",
+      "Bash(curl -s -X POST http://localhost:3000/api/devops-webhook -H \"Content-Type: application/json\" -d '{\"\"eventType\"\":\"\"workitem.updated\"\",\"\"createdDate\"\":\"\"2026-03-30T10:05:00Z\"\",\"\"resource\"\":{\"\"id\"\":42,\"\"fields\"\":{\"\"System.Title\"\":\"\"Fix login page timeout\"\",\"\"System.WorkItemType\"\":\"\"Bug\"\",\"\"System.State\"\":\"\"Active\"\",\"\"System.AssignedTo\"\":{\"\"displayName\"\":\"\"Samir Tak\"\"}}}}')",
+      "Bash(curl -s -X POST http://localhost:3000/api/devops-webhook -H \"Content-Type: application/json\" -d '{\"\"eventType\"\":\"\"workitem.commented\"\",\"\"createdDate\"\":\"\"2026-03-30T10:10:00Z\"\",\"\"resource\"\":{\"\"id\"\":42,\"\"text\"\":\"\"Reproduced on staging, looking into it now\"\",\"\"fields\"\":{\"\"System.Title\"\":\"\"Fix login page timeout\"\",\"\"System.WorkItemType\"\":\"\"Bug\"\",\"\"System.State\"\":\"\"Active\"\",\"\"System.AssignedTo\"\":{\"\"displayName\"\":\"\"Samir Tak\"\"}}}}')",
+      "Bash(curl -s -X POST http://localhost:3000/api/devops-webhook -H \"Content-Type: application/json\" -d '{\"\"eventType\"\":\"\"workitem.deleted\"\",\"\"createdDate\"\":\"\"2026-03-30T10:15:00Z\"\",\"\"resource\"\":{\"\"id\"\":99,\"\"fields\"\":{\"\"System.Title\"\":\"\"Duplicate ticket - remove\"\",\"\"System.WorkItemType\"\":\"\"Task\"\",\"\"System.State\"\":\"\"Removed\"\"}}}')"
+    ]
+  }
+}
